@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Handle and buffers | How to create a MQL5 indicator</title>
+  <meta name="description" content="Handle and buffers | How to create a MQL5 indicator" />
+  <meta name="generator" content="bookdown 0.26.3 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Handle and buffers | How to create a MQL5 indicator" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Handle and buffers | How to create a MQL5 indicator" />
+  
+  
+  
+
+<meta name="author" content="Camilo Mora, Ph.D." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="inputs.html"/>
+<link rel="next" href="containers-for-other-variables.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a>How to Make an MQL5 Indicator</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
+<ul>
+<li class="chapter" data-level="" data-path="open-the-mql5-editor.html"><a href="open-the-mql5-editor.html"><i class="fa fa-check"></i>Open the MQL5 editor</a></li>
+<li class="chapter" data-level="" data-path="create-templete.html"><a href="create-templete.html"><i class="fa fa-check"></i>Create templete</a></li>
+<li class="chapter" data-level="" data-path="basic-templete.html"><a href="basic-templete.html"><i class="fa fa-check"></i>Basic templete</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="indicator-sections.html"><a href="indicator-sections.html"><i class="fa fa-check"></i>Indicator sections:</a></li>
+<li class="chapter" data-level="" data-path="global-variables.html"><a href="global-variables.html"><i class="fa fa-check"></i>Global variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="other-indicators-needed.html"><a href="other-indicators-needed.html"><i class="fa fa-check"></i>Other indicators needed</a></li>
+<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html"><i class="fa fa-check"></i>Plot properties</a>
+<ul>
+<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#where-to-place-the-indicator"><i class="fa fa-check"></i>Where to place the indicator</a></li>
+<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#how-many-lines-to-plot"><i class="fa fa-check"></i>How many lines to plot</a></li>
+<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#plot-attributures"><i class="fa fa-check"></i>Plot attributures</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inputs.html"><a href="inputs.html"><i class="fa fa-check"></i>Inputs</a></li>
+<li class="chapter" data-level="" data-path="handle-and-buffers.html"><a href="handle-and-buffers.html"><i class="fa fa-check"></i>Handle and buffers</a></li>
+<li class="chapter" data-level="" data-path="containers-for-other-variables.html"><a href="containers-for-other-variables.html"><i class="fa fa-check"></i>Containers for other variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="oninit.html"><a href="oninit.html"><i class="fa fa-check"></i>OnInit{}</a>
+<ul>
+<li class="chapter" data-level="" data-path="handle.html"><a href="handle.html"><i class="fa fa-check"></i>Handle</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="oncalculate.html"><a href="oncalculate.html"><i class="fa fa-check"></i>OnCalculate{}</a>
+<ul>
+<li class="chapter" data-level="" data-path="bypass.html"><a href="bypass.html"><i class="fa fa-check"></i>Bypass</a></li>
+<li class="chapter" data-level="" data-path="optimize-calculations.html"><a href="optimize-calculations.html"><i class="fa fa-check"></i>Optimize calculations</a></li>
+<li class="chapter" data-level="" data-path="copy-buffers.html"><a href="copy-buffers.html"><i class="fa fa-check"></i>Copy buffers</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">How to create a MQL5 indicator</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="handle-and-buffers" class="section level2 unnumbered hasAnchor">
+<h2>Handle and buffers<a href="handle-and-buffers.html#handle-and-buffers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the Global section of the indicator you also need to define the handle. Which will be the numeric name used by the indicator.
+In this section you also will need to create the buffers where the data will be stored… as mentioned earlier, we will use two buffers…here we define who are they.
+<img src="Images/HandleBuffer.png" width="150%" style="display: block; margin: auto;" /></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="inputs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="containers-for-other-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"highlight": "pigments"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

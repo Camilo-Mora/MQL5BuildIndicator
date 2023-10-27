@@ -1,0 +1,10 @@
+bookdown::gitbook:
+  includes:
+  split_by: section+number
+  css: style.css
+  config:
+    highlight: pigments
+    toc:
+      before: |
+        <li><a>How to Make an MQL5 Indicator</a></li>
+
