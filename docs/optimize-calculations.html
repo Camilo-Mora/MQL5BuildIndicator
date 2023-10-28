@@ -84,7 +84,7 @@
 <li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html"><i class="fa fa-check"></i>Plot properties</a>
 <ul>
 <li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#where-to-place-the-indicator"><i class="fa fa-check"></i>Where to place the indicator</a></li>
-<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#how-many-lines-to-plot"><i class="fa fa-check"></i>How many lines to plot</a></li>
+<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#how-many-plots-will-be-addded-to-chart"><i class="fa fa-check"></i>How many plots will be addded to chart</a></li>
 <li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#plot-attributures"><i class="fa fa-check"></i>Plot attributures</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="inputs.html"><a href="inputs.html"><i class="fa fa-check"></i>Inputs</a></li>
@@ -94,12 +94,15 @@
 <li class="chapter" data-level="" data-path="oninit.html"><a href="oninit.html"><i class="fa fa-check"></i>OnInit{}</a>
 <ul>
 <li class="chapter" data-level="" data-path="handle.html"><a href="handle.html"><i class="fa fa-check"></i>Handle</a></li>
+<li class="chapter" data-level="" data-path="map-buffers.html"><a href="map-buffers.html"><i class="fa fa-check"></i>Map buffers</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="oncalculate.html"><a href="oncalculate.html"><i class="fa fa-check"></i>OnCalculate{}</a>
 <ul>
 <li class="chapter" data-level="" data-path="bypass.html"><a href="bypass.html"><i class="fa fa-check"></i>Bypass</a></li>
 <li class="chapter" data-level="" data-path="optimize-calculations.html"><a href="optimize-calculations.html"><i class="fa fa-check"></i>Optimize calculations</a></li>
 <li class="chapter" data-level="" data-path="copy-buffers.html"><a href="copy-buffers.html"><i class="fa fa-check"></i>Copy buffers</a></li>
+<li class="chapter" data-level="" data-path="additional-calculations.html"><a href="additional-calculations.html"><i class="fa fa-check"></i>Additional calculations</a></li>
+<li class="chapter" data-level="" data-path="done.html"><a href="done.html"><i class="fa fa-check"></i>Done</a></li>
 </ul></li>
 </ul>
 
@@ -120,7 +123,7 @@
             <section class="normal" id="section-">
 <div id="optimize-calculations" class="section level2 unnumbered hasAnchor">
 <h2>Optimize calculations<a href="optimize-calculations.html#optimize-calculations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Tell MT5 to run calculations from the start if this is the first time rning the code. however, if the code is already running calculate only for the last bar. This section can be coded in many different ways, and it is important that you check the outputs of the indicator. Specifically if the Buffer is being used from right to left or from left to right. By default the array is read from left to right. The latest value is in the latest cell.</p>
+<p>Tell MT5 to run calculations from the start if this is the first time runing the code. however, if the code is already running calculate only for the last bar. This section can be coded in many different ways, and it is important that you check the outputs of the indicator. Specifically if the Buffer is being used from right to left or from left to right. By default the array is read from left to right: the latest value is in the latest cell or that cell to the right.</p>
 <p><img src="Images/nBars.png" width="150%" style="display: block; margin: auto;" /></p>
 </div>
             </section>

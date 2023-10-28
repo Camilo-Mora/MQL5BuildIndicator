@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="optimize-calculations.html"/>
-
+<link rel="next" href="additional-calculations.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -84,7 +84,7 @@
 <li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html"><i class="fa fa-check"></i>Plot properties</a>
 <ul>
 <li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#where-to-place-the-indicator"><i class="fa fa-check"></i>Where to place the indicator</a></li>
-<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#how-many-lines-to-plot"><i class="fa fa-check"></i>How many lines to plot</a></li>
+<li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#how-many-plots-will-be-addded-to-chart"><i class="fa fa-check"></i>How many plots will be addded to chart</a></li>
 <li class="chapter" data-level="" data-path="plot-properties.html"><a href="plot-properties.html#plot-attributures"><i class="fa fa-check"></i>Plot attributures</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="inputs.html"><a href="inputs.html"><i class="fa fa-check"></i>Inputs</a></li>
@@ -94,12 +94,15 @@
 <li class="chapter" data-level="" data-path="oninit.html"><a href="oninit.html"><i class="fa fa-check"></i>OnInit{}</a>
 <ul>
 <li class="chapter" data-level="" data-path="handle.html"><a href="handle.html"><i class="fa fa-check"></i>Handle</a></li>
+<li class="chapter" data-level="" data-path="map-buffers.html"><a href="map-buffers.html"><i class="fa fa-check"></i>Map buffers</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="oncalculate.html"><a href="oncalculate.html"><i class="fa fa-check"></i>OnCalculate{}</a>
 <ul>
 <li class="chapter" data-level="" data-path="bypass.html"><a href="bypass.html"><i class="fa fa-check"></i>Bypass</a></li>
 <li class="chapter" data-level="" data-path="optimize-calculations.html"><a href="optimize-calculations.html"><i class="fa fa-check"></i>Optimize calculations</a></li>
 <li class="chapter" data-level="" data-path="copy-buffers.html"><a href="copy-buffers.html"><i class="fa fa-check"></i>Copy buffers</a></li>
+<li class="chapter" data-level="" data-path="additional-calculations.html"><a href="additional-calculations.html"><i class="fa fa-check"></i>Additional calculations</a></li>
+<li class="chapter" data-level="" data-path="done.html"><a href="done.html"><i class="fa fa-check"></i>Done</a></li>
 </ul></li>
 </ul>
 
@@ -120,21 +123,16 @@
             <section class="normal" id="section-">
 <div id="copy-buffers" class="section level2 unnumbered hasAnchor">
 <h2>Copy buffers<a href="copy-buffers.html#copy-buffers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Move data from the indicator handle to the respective buffer. In the case of the BB indicators, it delivers 3 buffers (0: mean lines, 1: pper and 2:lower). but we in this case we only want the upper and lower buffer, so we copy buffer 1 from the indicator into our upper buffer, and bufer 2 of the indicator into our lower buffer.</p>
-<p><img src="Images/CopyBuffers.png" width="150%" style="display: block; margin: auto;" />
-## Additional calculations {-}</p>
-<p>One can also do additional calculations over the desire range of candles.</p>
-<p><img src="Images/Calculations.png" width="150%" style="display: block; margin: auto;" /></p>
-
+<p>Move data from the indicator handle to the respective buffer. In the case of the BB indicators, it delivers 3 buffers (0: mean lines, 1: upper and 2:lower). but we in this case we only want the upper and lower buffer, so we copy buffer 1 from the indicator into our upper buffer, and bufer 2 of the indicator into our lower buffer.</p>
+<p><img src="Images/CopyBuffers.png" width="150%" style="display: block; margin: auto;" /></p>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="optimize-calculations.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="optimize-calculations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="additional-calculations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
